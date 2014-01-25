@@ -12,12 +12,21 @@ body {
     body {
       font-size: 60px; } }
 
+.display {
+  font-size: 40px; }
+  .display #bpm-value {
+    margin-top: -20px;
+    padding-bottom: 20px; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .display {
+      font-size: 80px; } }
+
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */
 input[type="range"] {
   width: 330px;
   height: 14px;
   border-radius: 5px;
-  background: #994448;
+  background: #B19454;
   -webkit-appearance: none;
   cursor: pointer;
   border: 0;
@@ -41,7 +50,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #E0DEDE;
   -webkit-appearance: none; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
     input[type="range"]::-webkit-slider-thumb {
@@ -72,7 +81,7 @@ input[type="range"]::-ms-thumb {
 
 input[type="range"]:focus::-webkit-slider-thumb {
   border-color: #E0DEDE;
-  background: #ffffff; }
+  background: #E0DEDE; }
 
 input[type="range"]:focus::-moz-range-thumb {
   border-color: #E0DEDE;
@@ -84,7 +93,7 @@ input[type="range"]:focus::-ms-thumb {
 
 input[type="range"]:active::-webkit-slider-thumb {
   border-color: #333333;
-  background: #ffffff; }
+  background: #E0DEDE; }
 
 input[type="range"]:active::-moz-range-thumb {
   border-color: #333333;
