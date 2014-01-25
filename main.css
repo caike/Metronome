@@ -1,17 +1,20 @@
 body {
   background-image: url("images/broken_noise.png");
   font-family: 'Merriweather', serif;
-  color: #C2C2C2;
+  color: #E0DEDE;
   font-size: 30px;
   text-align: center;
   margin-top: 100px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     body {
       background-image: url("images/broken_noise_@2X.png"); } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    body {
+      font-size: 60px; } }
 
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */
-.ws-range, input[type="range"] {
-  width: 400px;
+input[type="range"] {
+  width: 330px;
   height: 14px;
   border-radius: 5px;
   background: #994448;
@@ -21,26 +24,11 @@ body {
   outline: none;
   padding: 0;
   margin: 4px 0; }
-
-.ws-range .ws-range-thumb {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #666666;
-  border-radius: 50%;
-  background: #efefef; }
-
-.ws-range.ws-focus .ws-range-thumb {
-  border-color: #333333;
-  background: #fafafa; }
-
-.ws-range.ws-active .ws-range-thumb {
-  border-color: #000000;
-  background: #ffffff; }
-
-.ws-range .ws-range-min {
-  display: none;
-  height: 100%;
-  background: tranparent; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    input[type="range"] {
+      width: 640px;
+      height: 28px;
+      border-radius: 10px; } }
 
 input[type="range"]::-moz-range-track {
   border: none;
@@ -50,12 +38,15 @@ input[type="range"]::-ms-tooltip {
   display: none; }
 
 input[type="range"]::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #666666;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: #efefef;
+  background: #ffffff;
   -webkit-appearance: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    input[type="range"]::-webkit-slider-thumb {
+      width: 105px;
+      height: 105px; } }
 
 input[type="range"]::-ms-track {
   width: 400px;
@@ -70,37 +61,37 @@ input[type="range"]::-moz-range-thumb {
   height: 20px;
   border: 1px solid #666666;
   border-radius: 50%;
-  background: #efefef; }
+  background: #ffffff; }
 
 input[type="range"]::-ms-thumb {
   width: 20px;
   height: 20px;
   border: 1px solid #666666;
   border-radius: 50%;
-  background: #efefef; }
+  background: #ffffff; }
 
 input[type="range"]:focus::-webkit-slider-thumb {
-  border-color: #333333;
-  background: #fafafa; }
+  border-color: #E0DEDE;
+  background: #ffffff; }
 
 input[type="range"]:focus::-moz-range-thumb {
-  border-color: #333333;
-  background: #fafafa; }
+  border-color: #E0DEDE;
+  background: #ffffff; }
 
 input[type="range"]:focus::-ms-thumb {
-  border-color: #333333;
-  background: #fafafa; }
+  border-color: #E0DEDE;
+  background: #ffffff; }
 
 input[type="range"]:active::-webkit-slider-thumb {
-  border-color: #000000;
+  border-color: #333333;
   background: #ffffff; }
 
 input[type="range"]:active::-moz-range-thumb {
-  border-color: #000000;
+  border-color: #333333;
   background: #ffffff; }
 
 input[type="range"]:active::-ms-thumb {
-  border-color: #000000;
+  border-color: #333333;
   background: #ffffff; }
 
 input[type="range"]::-moz-range-progress {
@@ -112,9 +103,3 @@ input[type="range"]::-ms-fill-lower {
   display: none;
   height: 100%;
   background: tranparent; }
-
-.no-cssrangeinput input[type="range"] {
-  background: transparent;
-  margin: 0;
-  border: 0;
-  min-height: 22px; }
