@@ -24,12 +24,14 @@ body {
     margin-top: -20px;
     padding-bottom: 20px;
   }
+
   font-size: 40px;
 
   @media only screen
   and (min-device-width : 320px)
   and (max-device-width : 568px) {
-    font-size: 80px;
+    font-size: 120px;
+    margin-bottom: 50px;
   }
 }
 

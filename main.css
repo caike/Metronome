@@ -19,7 +19,8 @@ body {
     padding-bottom: 20px; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
     .display {
-      font-size: 80px; } }
+      font-size: 120px;
+      margin-bottom: 50px; } }
 
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */
 input[type="range"] {
