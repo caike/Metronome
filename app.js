@@ -23,10 +23,10 @@ function startSound(val) {
 
   return setInterval(function(){
     if(flag){
-      bpmValue.style.color = 'green';
+      bpmValue.className = 'bigger-number';
       flag = false;
     }else{
-      bpmValue.style.color = 'white';
+      bpmValue.className = null;
       flag = true;
     }
   }, intervalCount);

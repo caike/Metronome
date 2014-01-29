@@ -35,6 +35,12 @@ body {
   }
 }
 
+.bigger-number {
+  transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+}
+
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */
 input[type="range"] {
   width: 330px;
