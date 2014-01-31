@@ -23,9 +23,9 @@ body {
       margin-bottom: 50px; } }
 
 .bigger-number {
-  transform: scale(1.5, 1.5);
-  -ms-transform: scale(1.5, 1.5);
-  -webkit-transform: scale(1.5, 1.5); }
+  transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2); }
 
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */
 input[type="range"] {

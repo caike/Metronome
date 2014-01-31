@@ -1,7 +1,7 @@
 body {
   background-image: url('images/broken_noise.png');
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('images/broken_noise_@2X.png');
   }
 
@@ -36,9 +36,10 @@ body {
 }
 
 .bigger-number {
-  transform: scale(1.5, 1.5);
-  -ms-transform: scale(1.5, 1.5);
-  -webkit-transform: scale(1.5, 1.5);
+  $scaleValue: 1.2;
+  transform: scale($scaleValue, $scaleValue);
+  -ms-transform: scale($scaleValue, $scaleValue);
+  -webkit-transform: scale($scaleValue, $scaleValue);
 }
 
 /* from http://afarkas.github.io/webshim/demos/demos/webforms/styler/index.html?range */

@@ -31,17 +31,17 @@ function startBeat(val) {
 
   return setInterval(function(){
     if(flag){
-      bpmValue.className = 'bigger-number';
 
       tmpOscillator.noteOff(0)
+      bpmValue.className = null;
       flag = false;
     }else{
+      bpmValue.className = 'bigger-number';
       tmpOscillator = ac.createOscillator();
       tmpOscillator.connect(ac.destination);
       tmpOscillator.frequency.value = 400;
       tmpOscillator.noteOn(0);
 
-      bpmValue.className = null;
       flag = true;
     }
   }, intervalCount);
