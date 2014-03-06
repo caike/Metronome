@@ -3,8 +3,13 @@ var bpmValue = document.getElementById('bpm-value'),
     currentValue = null;
 
 // For sound controls
-var ac = new webkitAudioContext(),
-    tmpOscillator;
+var AudioContext = window.webkitAudioContext || window.AudioContext;
+var ac = new AudioContext(),
+    tmpOscillator = null;
+
+var gain = ac.createGain();
+gain.gain.value = 0.1;
+gain.connect(ac.destination);
 
 function updateBpm(val) {
   // prevents unnecessary updates
@@ -25,7 +30,7 @@ function startBeat(val) {
   intervalCount = 1/(val/60)*1000;
   //console.log("1 beat every " + intervalCount + " millisecond ");
 
-  if(typeof tmpOscillator !== 'undefined'){
+  if(tmpOscillator !== null){
     tmpOscillator.noteOff(0);
   }
 
@@ -38,8 +43,9 @@ function startBeat(val) {
     }else{
       bpmValue.className = 'bigger-number';
       tmpOscillator = ac.createOscillator();
-      tmpOscillator.connect(ac.destination);
-      tmpOscillator.frequency.value = 400;
+      tmpOscillator.type = 'triangle';
+      tmpOscillator.connect(gain);
+      tmpOscillator.frequency.value = 440;
       tmpOscillator.noteOn(0);
 
       flag = true;
